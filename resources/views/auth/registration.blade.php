@@ -21,7 +21,7 @@
                                     id="user_name" value="{{ old('name') }}">
 
                                 @error('name')
-                                    <p class="text-danger">{{ $message }}</p>
+                                    <p class="text-danger text-center mt-2">{{ $message }}</p>
                                 @enderror
                             </div>
 
@@ -35,7 +35,7 @@
                                     id="email_address" value="{{ old('email') }}">
 
                                 @error('email')
-                                    <p class="text-danger">{{ $message }}</p>
+                                    <p class="text-danger text-center mt-2">{{ $message }}</p>
                                 @enderror
                             </div>
 
@@ -49,7 +49,7 @@
                                     id="password">
 
                                 @error('password')
-                                    <p class="text-danger">{{ $message }}</p>
+                                    <p class="text-danger text-center mt-2">{{ $message }}</p>
                                 @enderror
                             </div>
 
@@ -67,7 +67,7 @@
                                     id="confirm_password">
 
                                 @error('password_confirmation')
-                                    <p class="text-danger">{{ $message }}</p>
+                                    <p class="text-danger text-center mt-2">{{ $message }}</p>
                                 @enderror
                             </div>
 

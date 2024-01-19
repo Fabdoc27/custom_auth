@@ -7,7 +7,7 @@
 
                 @if (session('error'))
                     <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                        {{ session('error') }}
+                        <p class="text-center m-0">{{ session('error') }}</p>
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                 @endif
@@ -29,7 +29,7 @@
                                     value="{{ old('email') }}">
 
                                 @error('email')
-                                    <p class="text-danger">{{ $message }}</p>
+                                    <p class="text-danger text-center mt-2">{{ $message }}</p>
                                 @enderror
                             </div>
 
@@ -43,7 +43,7 @@
                                     id="password">
 
                                 @error('password')
-                                    <p class="text-danger">{{ $message }}</p>
+                                    <p class="text-danger text-center mt-2">{{ $message }}</p>
                                 @enderror
                             </div>
 
