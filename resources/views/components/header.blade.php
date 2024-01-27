@@ -17,6 +17,9 @@
                             href="#">{{ ucwords(auth()->user()->name) }}</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link fw-medium" aria-current="page" href="{{ route('update') }}">Update Profile</a>
+                    </li>
+                    <li class="nav-item">
                         <form action="{{ route('logout') }}" method="POST">
                             @csrf
                             <button type="submit" class="btn fw-medium">Logout</button>

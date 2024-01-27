@@ -61,6 +61,27 @@
                     </div>
 
                 </form>
+
+                <div class="d-flex justify-content-center m-2">
+                    <span class="px-2 text-muted">
+                        Or continue with
+                    </span>
+                </div>
+
+                <div class="d-flex justify-content-center my-3">
+                    <div class="d-flex align-items-center">
+                        <a href="{{ route('google.sineIn') }}"
+                            class="border border-black rounded px-5 py-2 mx-2 text-primary-emphasis">
+                            <i class="bi bi-google fs-3"></i>
+                        </a>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <a href="{{ route('github.sineIn') }}"
+                            class="border border-black rounded px-5 py-2 mx-2 text-primary-emphasis">
+                            <i class="bi bi-github fs-3"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

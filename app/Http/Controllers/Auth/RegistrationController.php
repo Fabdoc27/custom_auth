@@ -19,7 +19,7 @@ class RegistrationController extends Controller {
             'name'     => 'required|string',
             'email'    => 'required|email|unique:users,email',
             'password' => [
-                'required', 'min:3', 'confirmed',
+                'required', 'confirmed',
                 Password::min( 6 )->numbers()->symbols()->mixedCase(),
             ],
             // confirmed will get (password_confirmation value. don't need another validation for this)

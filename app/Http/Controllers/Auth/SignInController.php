@@ -13,7 +13,7 @@ class SignInController extends Controller {
 
     public function store( Request $request ) {
         $this->validate( $request, [
-            'email'    => 'required|email',
+            'email'    => 'required|email|exists:users,email',
             'password' => 'required',
         ] );
 
