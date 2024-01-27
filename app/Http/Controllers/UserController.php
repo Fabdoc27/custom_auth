@@ -16,27 +16,18 @@ class UserController extends Controller {
     public function update( Request $request ) {
         $user = auth()->user();
 
-        $rules = [
-            'name'     => 'nullable|string',
+        $this->validate( $request, [
+            'name'     => 'required|string',
             'password' => [
-                'nullable',
-                'confirmed',
+                'required', 'confirmed',
                 Password::min( 6 )->numbers()->symbols()->mixedCase(),
             ],
-        ];
+        ] );
 
-        $this->validate( $request, $rules );
-
-        // Update user data
-        if ( $request->has( 'name' ) ) {
-            $user->name = $request->input( 'name' );
-        }
-
-        if ( $request->has( 'password' ) ) {
-            $user->password = Hash::make( $request->input( 'password' ) );
-        }
-
-        $user->save();
+        $user->update( [
+            'name'     => $request->input( 'name' ),
+            'password' => Hash::make( $request->input( 'password' ) ),
+        ] );
 
         return redirect( 'dashboard' )->with( 'success', 'Profile Update Successful' );
     }
