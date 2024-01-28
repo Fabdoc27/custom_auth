@@ -29,6 +29,7 @@ class SocialLogInController extends Controller {
 
             Auth::login( $newUser );
         }
+
         return redirect()->route( 'dashboard' )->with( 'success', 'Login Successful' );
     }
 
@@ -53,8 +54,8 @@ class SocialLogInController extends Controller {
             ] );
 
             Auth::login( $newUser );
-
-            return redirect()->route( 'dashboard' )->with( 'success', 'Login Successful' );
         }
+
+        return redirect()->route( 'dashboard' )->with( 'success', 'Login Successful' );
     }
 }
