@@ -37,7 +37,7 @@
                                 <label for="password" class="form-label">Password</label>
                                 <input type="password" name="password"
                                     class="form-control
-                                    @error('email')
+                                    @error('password')
                                     border border-danger
                                     @enderror"
                                     id="password">
